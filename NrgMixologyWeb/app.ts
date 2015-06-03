@@ -1,4 +1,9 @@
-﻿///<reference path="typings/angular2/angular2.d.ts"/>
+﻿/// <reference path="scripts/typings/angularjs/angular.d.ts" />
+class MixologyApp {
+    constructor() {
+        console.info("Starting App");
+        angular.module("MixologyApp", ['ngMaterial']);
+    }
+}
 
-//import { boostrap, Component, View} from "angular2/angular2";
-//@Component({selector:"mixology"})
+var app = new MixologyApp();

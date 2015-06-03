@@ -1,4 +1,10 @@
-///<reference path="typings/angular2/angular2.d.ts"/>
-//import { boostrap, Component, View} from "angular2/angular2";
-//@Component({selector:"mixology"}) 
+/// <reference path="scripts/typings/angularjs/angular.d.ts" />
+var MixologyApp = (function () {
+    function MixologyApp() {
+        console.info("Starting App");
+        angular.module("MixologyApp", ['ngMaterial']);
+    }
+    return MixologyApp;
+})();
+var app = new MixologyApp();
 //# sourceMappingURL=app.js.map
