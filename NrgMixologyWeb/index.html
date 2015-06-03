@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link href="bower_components/semantic-ui/dist/semantic.css" rel="stylesheet" />
+    <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet" />
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic-ui/dist/semantic.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+</head>
+<body>
+ 
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+                <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+            </md-button>
+            <h1>Hello World</h1>
+        </div>
+    </md-toolbar>
+    <div layout="row" flex>
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+
+        </md-sidenav>
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding">
+                <div class="ui vertical menu">
+                    <div class="item">
+                        <div class="ui input"><input type="text" placeholder="Search..."></div>
+                    </div>
+                    <div class="item">
+                        <i class="home icon"></i> Home
+                        <div class="menu">
+                            <a class="active item">Search</a>
+                            <a class="item">Add</a>
+                            <a class="item">Remove</a>
+                        </div>
+                    </div>
+                    <a class="item">
+                        <i class="grid layout icon"></i> Browse
+                    </a>
+                    <a class="item">
+                        <i class="mail icon"></i> Messages
+                    </a>
+                    <div class="ui dropdown item">
+                        More
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item"><i class="edit icon"></i> Edit Profile</a>
+                            <a class="item"><i class="globe icon"></i> Choose Language</a>
+                            <a class="item"><i class="settings icon"></i> Account Settings</a>
+                        </div>
+                    </div>
+                </div>
+            </md-content>
+        </div>
+    </div>
+    <div id="content"></div>
+</body>
+</html>
