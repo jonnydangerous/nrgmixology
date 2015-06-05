@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="" />
     <ignored path="nrgmixology.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drinks.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="drinks.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13824885">
+            <state vertical-scroll-proportion="-5.0">
               <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -108,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coreDirectives.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="coreDirectives.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.7399103">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
               <folding>
                 <element signature="e#63#76#0" expanded="false" />
               </folding>
@@ -169,12 +163,12 @@
         <option value="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
       </list>
     </option>
   </component>
@@ -861,16 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-          <folding>
-            <element signature="e#63#76#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -894,10 +878,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13824885">
+        <state vertical-scroll-proportion="-5.0">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7399103">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="e#63#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
