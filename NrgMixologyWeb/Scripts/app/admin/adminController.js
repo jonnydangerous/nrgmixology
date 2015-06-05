@@ -10,7 +10,7 @@ var AdminController = (function () {
             drinks.$loaded().then(function (result) {
                 _this.Drinks = result;
                 _this.DrinkCombos.forEach(function (combo) {
-                    combo.Drinks = _this.GetDrinks(combo.Drinks);
+                    combo.DrinksObjs = _this.GetDrinks(combo.Drinks);
                 });
             });
         });

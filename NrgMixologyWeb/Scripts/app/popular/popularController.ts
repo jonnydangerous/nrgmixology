@@ -17,11 +17,11 @@ class PopularController {
         });
     }
 
-    GetDrinks(drinkIdS) {
+    GetDrinks(drinkIds) {
         if (this.Drinks.length > 0) {
             var ids = [];
-            for (var prop in drinkIdS) {
-                ids.push(drinkIdS[prop]);
+            for (var prop in drinkIds) {
+                ids.push(drinkIds[prop]);
             }
             return this.Drinks.filter((drink) => { return ids.indexOf(drink.$id) >= 0 });
         }

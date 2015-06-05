@@ -16,7 +16,7 @@ class AdminController {
                 this.Drinks = result;
 
                 this.DrinkCombos.forEach((combo) => {
-                    combo.Drinks = this.GetDrinks(combo.Drinks)
+                    combo.DrinksObjs = this.GetDrinks(combo.Drinks)
                 })
             });
         });

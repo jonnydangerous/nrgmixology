@@ -1,6 +1,9 @@
 ﻿<div>
-    <div class="description">
+    <div class="description" ng-if="Drinks">
         <b>Drinks:</b>
-        <a class="ui tag label" ng-repeat="drink in Drinks">{{drink.Brand}}: {{drink.Name}} <i class="delete icon" ng-click="RemoveDrink(drink)"></i></a>
+        <div class="ui tag label" ng-repeat="drink in Drinks" style="display: inline-block;margin-left: 1.5em;">
+            <a ng-href="/drink/{{drink.Brand}}-{{drink.Name}}">{{drink.Brand}}: {{drink.Name}}</a>
+            <i class="delete icon" ng-click="RemoveDrink(drink)"></i>
+        </div>
     </div>
 </div>
