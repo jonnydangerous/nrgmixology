@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nrgmixology.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="popular.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popular.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/popular.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.328341">
-              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="12" column="115" selection-start-line="12" selection-start-column="115" selection-end-line="12" selection-end-column="115" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#md-content#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#md-content#0;n#div#0;n#!!top" expanded="true" />
@@ -36,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.08640553">
+              <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -50,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -105,25 +108,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js">
+      <file leaf-file-name="coreDirectives.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#63#76#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coreDirectives.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
+      <file leaf-file-name="coreDirectives.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#63#76#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,13 +169,13 @@
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/registerControllers.ts" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/registerControllers.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" />
       </list>
     </option>
   </component>
@@ -304,10 +307,6 @@
               <option name="myItemId" value="popular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popularController.ts" />
-              <option name="myItemType" value="com.intellij.lang.typescript.compiler.ui.projectView.TypeScriptNestingTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -359,10 +358,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminController.ts" />
-              <option name="myItemType" value="com.intellij.lang.typescript.compiler.ui.projectView.TypeScriptNestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -559,7 +554,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,7 +564,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -814,7 +809,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,16 +819,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,16 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
-          <folding>
-            <element signature="e#63#76#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/registerControllers.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -886,12 +863,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts">
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#63#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,14 +893,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/popular.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.328341">
-          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="12" column="115" selection-start-line="12" selection-start-column="115" selection-end-line="12" selection-end-column="115" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#md-content#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#md-content#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08640553">
+          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>

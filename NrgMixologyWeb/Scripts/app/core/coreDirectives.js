@@ -46,6 +46,7 @@ var Rating = (function () {
 })();
 var Drinks = (function () {
     function Drinks() {
+        var _this = this;
         this.restrict = "E";
         this.scope = {
             Drinks: "=items"
@@ -53,6 +54,7 @@ var Drinks = (function () {
         this.templateUrl = "views/drinks.html";
         this.link = function (scope, element, attrs, ngModel) {
             console.info(scope.Drinks);
+            scope.RemoveDrink = _this.RemoveDrink;
         };
     }
     Drinks.prototype.RemoveDrink = function (drink) {
