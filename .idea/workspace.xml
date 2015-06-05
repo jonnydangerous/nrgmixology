@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/images/hulk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/images/lime-freeze_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/images/nos_grape.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" afterPath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.ts" />
     </list>
     <ignored path="nrgmixology.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/popular.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.5">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -87,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.416666">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -146,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -818,7 +809,7 @@
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -838,7 +829,7 @@
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/popular.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.5">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -894,7 +885,7 @@
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.416666">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

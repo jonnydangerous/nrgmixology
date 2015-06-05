@@ -18,11 +18,13 @@ class PopularController {
     }
 
     GetDrinks(drinkIdS) {
-        var ids = [];
-        for (var prop in drinkIdS) {
-            ids.push(drinkIdS[prop]);
+        if (this.Drinks.length > 0) {
+            var ids = [];
+            for (var prop in drinkIdS) {
+                ids.push(drinkIdS[prop]);
+            }
+            return this.Drinks.filter((drink) => { return ids.indexOf(drink.$id) >= 0 });
         }
-        return this.Drinks.filter((drink) => { return ids.indexOf(drink.$id)>=0 });
     }
 }
 ((angular) => {
