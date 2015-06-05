@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/drinks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" afterPath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nrgmixology.iws" />
@@ -33,21 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="node-app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="node-app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/node-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.28587443">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77764976">
-              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            <state vertical-scroll-proportion="-24.375">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -151,15 +142,15 @@
       <list>
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/routeConfig.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/typings/angularjs/angular.d.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/popular.html" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/admin.html" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/admin/adminController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
-        <option value="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/Scripts/app/popular/popularController.ts" />
         <option value="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
+        <option value="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
       </list>
     </option>
   </component>
@@ -653,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/node-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -673,12 +656,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77764976">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        <state vertical-scroll-proportion="-24.375">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/node-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28587443">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

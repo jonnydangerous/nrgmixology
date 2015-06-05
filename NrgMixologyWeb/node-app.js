@@ -9,7 +9,7 @@ app.use('/images', express.static('images'));
 app.use('/scripts', express.static('scripts'));
 app.use('/bower_components', express.static('bower_components'));
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
     res.render('index.html', {
         title: 'NRG Mixology'
     });
