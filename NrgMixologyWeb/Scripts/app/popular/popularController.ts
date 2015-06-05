@@ -8,12 +8,17 @@ class PopularController {
 
     constructor($firebaseArray, FIREBASE_URL) {
         var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
-        var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
-        drinks.$loaded().then((result) => {
-            this.Drinks = result;
-        });
         list.$loaded().then((result) => {
             this.DrinkCombos = result;
+
+            var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
+            drinks.$loaded().then((result) => {
+                this.Drinks = result;
+
+                this.DrinkCombos.forEach((combo) => {
+                    combo.DrinksObjs = this.GetDrinks(combo.Drinks)
+                });
+            });
         });
     }
 

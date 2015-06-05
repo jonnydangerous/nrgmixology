@@ -28,7 +28,7 @@ var AdminController = (function () {
     return AdminController;
 })();
 (function (angular) {
-    var mod = angular.module("MixologyApp.Controllers", []);
+    var mod = angular.module("MixologyApp.Controllers");
     mod.controller("AdminController", AdminController);
 })(angular);
 //# sourceMappingURL=adminController.js.map
