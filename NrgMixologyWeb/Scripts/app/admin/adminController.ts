@@ -17,7 +17,7 @@ class AdminController {
 
                 this.DrinkCombos.forEach((combo) => {
                     combo.DrinksObjs = this.GetDrinks(combo.Drinks)
-                })
+                });
             });
         });
     }
@@ -33,7 +33,7 @@ class AdminController {
     }
 }
 ((angular) => {
-    var mod = angular.module("MixologyApp.Controllers", []);
+    var mod = angular.module("MixologyApp.Controllers");
     mod.controller("AdminController", AdminController);
 })(angular);
 

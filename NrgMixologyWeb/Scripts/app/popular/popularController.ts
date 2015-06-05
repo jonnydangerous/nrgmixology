@@ -28,6 +28,6 @@ class PopularController {
     }
 }
 ((angular) => {
-    var mod = angular.module("MixologyApp.Controllers", []);
+    var mod = angular.module("MixologyApp.Controllers");
     mod.controller("PopularController", PopularController);
 })(angular);
