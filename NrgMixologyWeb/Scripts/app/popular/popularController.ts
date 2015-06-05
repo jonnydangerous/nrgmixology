@@ -13,6 +13,14 @@
             this.DrinkCombos = result;
         });
     }
+
+    GetDrinks(drinkIdS) {
+        var ids = [];
+        for (var prop in drinkIdS) {
+            ids.push(drinkIdS[prop]);
+        }
+        return this.Drinks.filter((drink) => { return ids.indexOf(drink.$id)>=0 });
+    }
 }
 ((angular) => {
     var mod = angular.module("MixologyApp.Controllers", []);

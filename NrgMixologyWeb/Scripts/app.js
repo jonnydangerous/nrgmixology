@@ -1,4 +1,4 @@
-/// <reference path="scripts/typings/angularjs/angular.d.ts" />
+/// <reference path="typings/angularjs/angular.d.ts" />
 var MixologyApp = (function () {
     function MixologyApp() {
         console.info("Starting App");

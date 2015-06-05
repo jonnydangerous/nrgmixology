@@ -64,13 +64,14 @@
                 </div>
                 <div class="ui very relaxed list">
                     <h1>Popular <i class="thumbs up icon"></i></h1>
-                    <div class="item" ng-repeat="item in popular.DrinkCombos">
-                        <img class="ui avatar image" ng-src="/images/{{item.Image}}">
+                    <div class="item" ng-repeat="item in popular.DrinkCombos" ng-if="popular.DrinkCombos.$loaded">
+                        <img class="ui avatar image" ng-src="/images/{{item.Image}}" style="position: relative;top: -30px;">
                         <div class="content">
                             <a class="header">{{item.Name}}</a>
-                            <div class="ui star rating" rating="item.Rating" enabled="false"></div>
-                            <div class="description">{{item.Description}}
+                            <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
+                            <div class="description" style="padding: 10px 0px;">{{item.Description}}
                             </div>
+                            <drinks items="popular.GetDrinks(item.Drinks)"></drinks>
                         </div>
                     </div>
                 </div>
