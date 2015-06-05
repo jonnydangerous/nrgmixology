@@ -1,4 +1,6 @@
-﻿//module Ui {
+﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
+
+//module Ui {
 //    'use strict';
 //    export function RatingDirective(): ng.IDirective {
 //        return {
@@ -56,9 +58,12 @@ class Drinks implements ng.IDirective {
     public scope = {
         Drinks: "=items"
     };
-    public templateUrl: string = "drinks.html";
+    public templateUrl: string = "views/drinks.html";
     public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
         console.info(scope.Drinks);
+    }
+    RemoveDrink(drink) {
+        console.info("Remove " + drink.Name);
     }
 }
 

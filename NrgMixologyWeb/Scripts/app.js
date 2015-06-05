@@ -10,19 +10,19 @@ var MixologyApp = (function () {
     };
     return MixologyApp;
 })();
-
 var app = new MixologyApp();
 app.Constant("FIREBASE_URL", "https://nrgmixology.firebaseio.com/");
 app.module.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
-    $routeProvider.when("/", {
-        templateUrl: "/views/popular.html",
-        controller: "PopularController",
-        controllerAs: "popular"
-    }).when("/admin", {
-        templateUrl: "/views/admin.html",
-        controller: "AdminController",
-        controllerAs: "admin"
-    });
-    $locationProvider.html5Mode({ enabled: true, requireBase: false });
-}]);
+        $routeProvider.when("/", {
+            templateUrl: "/views/popular.html",
+            controller: "PopularController",
+            controllerAs: "popular"
+        }).when("/admin", {
+            templateUrl: "/views/admin.html",
+            controller: "AdminController",
+            controllerAs: "admin"
+        });
+        $locationProvider.html5Mode({ enabled: true, requireBase: false });
+    }
+]);
 //# sourceMappingURL=app.js.map

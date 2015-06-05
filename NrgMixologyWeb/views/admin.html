@@ -1,5 +1,17 @@
 <div ng-controller="AdminController as admin">
     <md-content layout="column" flex class="md-padding">
-        Admin stuffs
+        <div class="ui very relaxed list">
+            <h1>Manage Drinks <i class="lab icon"></i></h1>
+            <div class="item" ng-repeat="item in admin.DrinkCombos">
+                <img class="ui avatar image" ng-src="/images/{{item.Image}}">
+                <div class="content">
+                    <a class="header">{{item.Name}}</a>
+                    <div class="ui star rating" rating="item.Rating" enabled="false"></div>
+                    <div class="description">{{item.Description}}
+                    </div>
+                    <drinks items="item.Drinks"></drinks>
+                </div>
+            </div>
+        </div>
     </md-content>
 </div>

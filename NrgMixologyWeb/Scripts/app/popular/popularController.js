@@ -17,9 +17,7 @@ var PopularController = (function () {
         for (var prop in drinkIdS) {
             ids.push(drinkIdS[prop]);
         }
-        return this.Drinks.filter(function (drink) {
-            return ids.indexOf(drink.$id) >= 0;
-        });
+        return this.Drinks.filter(function (drink) { return ids.indexOf(drink.$id) >= 0; });
     };
     PopularController.$inject = ["$firebaseArray", "FIREBASE_URL"];
     return PopularController;

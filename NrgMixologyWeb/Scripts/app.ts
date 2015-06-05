@@ -5,7 +5,7 @@ class MixologyApp {
     module;
     constructor() {
         console.info("Starting App");
-        this.module = angular.module("MixologyApp", ["ngRoute", "ngMaterial", "MixologyApp.Core", "MixologyApp.Controllers","MixologyApp.Directives"]);
+        this.module = angular.module("MixologyApp", ["ngRoute", "ngMaterial", "MixologyApp.Core", "MixologyApp.Controllers", "MixologyApp.Directives"]);
     }
 
     Constant(key, value) {

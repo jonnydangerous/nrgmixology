@@ -1,3 +1,4 @@
+/// <reference path="../../typings/angularjs/angular.d.ts" />
 //module Ui {
 //    'use strict';
 //    export function RatingDirective(): ng.IDirective {
@@ -31,8 +32,7 @@ var Rating = (function () {
     function Rating() {
         this.restrict = "A";
         this.scope = {
-            Rating: "=rating",
-            Enabled: "=enabled"
+            Rating: "=rating", Enabled: "=enabled"
         };
         this.link = function (scope, element, attrs, ngModel) {
             element.rating({
@@ -50,11 +50,14 @@ var Drinks = (function () {
         this.scope = {
             Drinks: "=items"
         };
-        this.templateUrl = "drinks.html";
+        this.templateUrl = "views/drinks.html";
         this.link = function (scope, element, attrs, ngModel) {
             console.info(scope.Drinks);
         };
     }
+    Drinks.prototype.RemoveDrink = function (drink) {
+        console.info("Remove " + drink.Name);
+    };
     return Drinks;
 })();
 var ui = Directives.getModule();
