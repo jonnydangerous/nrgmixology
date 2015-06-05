@@ -10,6 +10,7 @@ var MixologyApp = (function () {
     };
     return MixologyApp;
 })();
+
 var app = new MixologyApp();
 app.Constant("FIREBASE_URL", "https://nrgmixology.firebaseio.com/");
 app.module.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
