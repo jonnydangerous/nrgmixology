@@ -660,12 +660,15 @@
     <Content Include="bower_components\semantic-ui\tasks\rtl\watch.js" />
     <Content Include="bower_components\semantic-ui\tasks\version.js" />
     <Content Include="bower_components\semantic-ui\tasks\watch.js" />
+    <Content Include="views\admin.html" />
     <Content Include="views\drinks.html" />
     <Content Include="views\index.html" />
+    <Content Include="views\popular.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\admin\adminController.ts" />
     <TypeScriptCompile Include="Scripts\app\core\coreDirectives.ts" />
     <TypeScriptCompile Include="Scripts\app\core\setupController.ts" />
     <TypeScriptCompile Include="Scripts\app\popular\popularController.ts" />

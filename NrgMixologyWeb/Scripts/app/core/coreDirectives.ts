@@ -56,7 +56,7 @@ class Drinks implements ng.IDirective {
     public scope = {
         Drinks: "=items"
     };
-    public templateUrl: string = "drinks.html";
+    public templateUrl: string = "views/drinks.html";
     public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
         console.info(scope.Drinks);
     }
