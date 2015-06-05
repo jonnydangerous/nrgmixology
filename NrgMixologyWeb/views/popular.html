@@ -1,0 +1,23 @@
+<div ng-controller="PopularController as popular">
+    <md-content layout="column" flex class="md-padding">
+        <div class="ui right labeled animated fade icon button ">
+            <i class="right lab icon"></i>
+            <div class="visible content">NRG Me!</div>
+            <div class="hidden content">
+                Click for random NRG combo
+            </div>
+        </div>
+        <div class="ui very relaxed list">
+            <h1>Popular <i class="thumbs up icon"></i></h1>
+            <div class="item" ng-repeat="item in popular.DrinkCombos">
+                <img class="ui avatar image" ng-src="/images/{{item.Image}}">
+                <div class="content">
+                    <a class="header">{{item.Name}}</a>
+                    <div class="ui star rating" rating="item.Rating" enabled="false"></div>
+                    <div class="description">{{item.Description}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </md-content>
+</div>

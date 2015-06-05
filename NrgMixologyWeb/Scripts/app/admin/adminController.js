@@ -1,7 +1,7 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
-var PopularController = (function () {
-    function PopularController($firebaseArray, FIREBASE_URL) {
+var AdminController = (function () {
+    function AdminController($firebaseArray, FIREBASE_URL) {
         var _this = this;
         var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
         var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
@@ -12,11 +12,11 @@ var PopularController = (function () {
             _this.DrinkCombos = result;
         });
     }
-    PopularController.$inject = ["$firebaseArray", "FIREBASE_URL"];
-    return PopularController;
+    AdminController.$inject = ["$firebaseArray", "FIREBASE_URL"];
+    return AdminController;
 })();
 (function (angular) {
     var mod = angular.module("MixologyApp.Controllers", []);
-    mod.controller("PopularController", PopularController);
+    mod.controller("AdminController", AdminController);
 })(angular);
-//# sourceMappingURL=popularController.js.map
+//# sourceMappingURL=adminController.js.map

@@ -9,6 +9,7 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/semantic-ui/dist/semantic.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="../bower_components/angular-material/angular-material.min.js"></script>
@@ -17,6 +18,7 @@
 
     <script src="../scripts/app/core/coreDirectives.js"></script>
     <script src="../scripts/app/core/setupController.js"></script>
+    <script src="../scripts/app/admin/adminController.js"></script>
     <script src="../scripts/app/popular/popularController.js"></script>
     <script src="../scripts/app.js"></script>
 </head>
@@ -33,7 +35,7 @@
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
             <div class="ui vertical menu" style="width: 100%;height: 100%;">
                 <div class="item">
-                    <i class="home icon"></i> Home
+                    <a href="/"><i class="home icon"></i> Home</a>
                     <div class="menu">
                         <div class="item">
                             <md-input-container style="padding: 0;">
@@ -51,34 +53,14 @@
                 <a class="item">
                     <i class="mail icon"></i> Messages
                 </a>
+                <a class="item" href="/admin">
+                    <i class="lock icon"></i> Admin
+                </a>
             </div>
         </md-sidenav>
-        <div layout="column" flex ng-controller="PopularController as popular">
-            <md-content layout="column" flex class="md-padding">
-                <div class="ui right labeled animated fade icon button ">
-                    <i class="right lab icon"></i>
-                    <div class="visible content">NRG Me!</div>
-                    <div class="hidden content">
-                        Click for random NRG combo
-                    </div>
-                </div>
-                <div class="ui very relaxed list">
-                    <h1>Popular <i class="thumbs up icon"></i></h1>
-                    <div class="item" ng-repeat="item in popular.DrinkCombos">
-                        <img class="ui avatar image" ng-src="/images/{{item.Image}}">
-                        <div class="content">
-                            <a class="header">{{item.Name}}</a>
-                            <div class="ui star rating" rating="item.Rating" enabled="false"></div>
-                            <div class="description">{{item.Description}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </md-content>
-        </div>
-    </div>
-    <div ng-controller="SetupController">
+        <div layout="column" flex ng-view>
 
+        </div>
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
-﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
 
-class PopularController {
+class AdminController {
     static $inject = ["$firebaseArray", "FIREBASE_URL"];
     DrinkCombos: Array<any>;
     Drinks: Array<any>;
@@ -19,5 +19,5 @@ class PopularController {
 }
 ((angular) => {
     var mod = angular.module("MixologyApp.Controllers", []);
-    mod.controller("PopularController", PopularController);
+    mod.controller("AdminController", AdminController);
 })(angular);
