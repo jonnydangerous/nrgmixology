@@ -2,18 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1402868-b695-4247-85e4-c03b89de6bcb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/node-app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/nrgmixology.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NrgMixologyWeb/app.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NrgMixologyWeb/app.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NrgMixologyWeb/app.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/NrgMixologyWeb/index.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/images/monster1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/firebase/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/firebase/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/dist/angularfire.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/dist/angularfire.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/firebase/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/coreDirectives.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/firebase/firebase-debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/typings/firebase/firebase-simplelogin.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/typings/firebase/firebase.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/firebase/firebase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/bower_components/angularfire/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/typings/jquery/jquery.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/popular/popularController.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app/core/setupController.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NrgMixologyWeb/tsconfig.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NrgMixologyWeb/typings/tsd.d.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" afterPath="$PROJECT_DIR$/NrgMixologyWeb/NrgMixology.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js.map" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" afterPath="$PROJECT_DIR$/NrgMixologyWeb/scripts/app.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" afterPath="$PROJECT_DIR$/NrgMixologyWeb/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/packages.config" afterPath="$PROJECT_DIR$/NrgMixologyWeb/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NrgMixologyWeb/tsd.json" afterPath="$PROJECT_DIR$/NrgMixologyWeb/tsd.json" />
     </list>
     <ignored path="nrgmixology.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47058824">
-              <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.86764705">
+              <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -310,8 +332,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NrgMixologyWeb/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47058824">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.86764705">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#div#0;n#div#0;n#md-sidenav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

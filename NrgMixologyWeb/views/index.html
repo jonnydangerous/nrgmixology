@@ -12,6 +12,12 @@
     <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="../bower_components/angular-material/angular-material.min.js"></script>
+    <script src="../bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+
+    <script src="../scripts/app/core/coreDirectives.js"></script>
+    <script src="../scripts/app/core/setupController.js"></script>
+    <script src="../scripts/app/popular/popularController.js"></script>
     <script src="../scripts/app.js"></script>
 </head>
 <body>
@@ -47,7 +53,7 @@
                 </a>
             </div>
         </md-sidenav>
-        <div layout="column" flex>
+        <div layout="column" flex ng-controller="PopularController as popular">
             <md-content layout="column" flex class="md-padding">
                 <div class="ui right labeled animated fade icon button ">
                     <i class="right lab icon"></i>
@@ -58,18 +64,21 @@
                 </div>
                 <div class="ui very relaxed list">
                     <h1>Popular <i class="thumbs up icon"></i></h1>
-                    <div class="item">
-                        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+                    <div class="item" ng-repeat="item in popular.DrinkCombos">
+                        <img class="ui avatar image" ng-src="/images/{{item.Image}}">
                         <div class="content">
-                            <a class="header">Daniel Louise</a>
-                            <div class="ui star rating" data-rating="3"></div>
-                            <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.
+                            <a class="header">{{item.Name}}</a>
+                            <div class="ui star rating" rating="item.Rating" enabled="false"></div>
+                            <div class="description">{{item.Description}}
                             </div>
                         </div>
                     </div>
                 </div>
             </md-content>
         </div>
+    </div>
+    <div ng-controller="SetupController">
+
     </div>
 </body>
 </html>

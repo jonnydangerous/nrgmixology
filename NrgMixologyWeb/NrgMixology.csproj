@@ -340,10 +340,15 @@
     <Content Include="bower_components\angular-material\modules\js\whiteframe\whiteframe.js" />
     <Content Include="bower_components\angular-material\modules\js\whiteframe\whiteframe.min.css" />
     <Content Include="bower_components\angular-material\modules\js\whiteframe\whiteframe.min.js" />
+    <Content Include="bower_components\angularfire\dist\angularfire.js" />
+    <Content Include="bower_components\angularfire\dist\angularfire.min.js" />
+    <Content Include="bower_components\angularfire\index.js" />
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
+    <Content Include="bower_components\firebase\firebase-debug.js" />
+    <Content Include="bower_components\firebase\firebase.js" />
     <Content Include="bower_components\jquery\dist\jquery.js" />
     <Content Include="bower_components\jquery\dist\jquery.min.js" />
     <Content Include="bower_components\jquery\MIT-LICENSE.txt" />
@@ -660,6 +665,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\app\core\setupController.ts" />
+    <TypeScriptCompile Include="Scripts\app\popular\popularController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
@@ -667,8 +674,10 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\firebase\firebase-simplelogin.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\firebase\firebase.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\underscore\underscore.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower_components\jquery\.bower.json" />
@@ -1088,6 +1097,13 @@
     <Content Include="bower_components\angular\package.json" />
     <Content Include="bower_components\angular\README.md" />
     <Content Include="packages.config" />
+    <Content Include="bower_components\angularfire\.bower.json" />
+    <Content Include="bower_components\angularfire\bower.json" />
+    <Content Include="bower_components\angularfire\LICENSE" />
+    <Content Include="bower_components\angularfire\README.md" />
+    <Content Include="bower_components\firebase\.bower.json" />
+    <Content Include="bower_components\firebase\bower.json" />
+    <Content Include="bower_components\firebase\README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -1095,6 +1111,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
@@ -1124,6 +1141,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
