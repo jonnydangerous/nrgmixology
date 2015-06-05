@@ -1,4 +1,4 @@
-﻿/// <reference path="scripts/typings/angularjs/angular.d.ts" />
+﻿/// <reference path="typings/angularjs/angular.d.ts" />
 class MixologyApp {
     constructor() {
         console.info("Starting App");

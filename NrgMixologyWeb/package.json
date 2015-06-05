@@ -1,0 +1,23 @@
+{
+  "name": "NrgMixologyWeb",
+  "version": "0.0.0",
+  "description": "NRG Mixology",
+  "main": "node-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonnydangerous/nrgmixology.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonnydangerous/nrgmixology/issues"
+  },
+  "homepage": "https://github.com/jonnydangerous/nrgmixology",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.4"
+  }
+}
