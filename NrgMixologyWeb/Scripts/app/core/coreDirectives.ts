@@ -38,6 +38,7 @@ interface IDrinks extends ng.IScope {
 
 interface ISemantic extends ng.IAugmentedJQuery {
     rating: Function;
+    dropdown:Function;
 }
 
 class Rating implements ng.IDirective {
@@ -51,6 +52,19 @@ class Rating implements ng.IDirective {
             maxRating: 5,
             interactive: scope.Enabled
         });
+    }
+}
+class Dropdown implements ng.IDirective {
+    public restrict: string = "E";
+    public scope = {
+        Values: "=items"
+    };
+    public templateUrl:string="views/dropdown.html";
+    public link: ng.IDirectiveLinkFn = (scope: IRating, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+        element.dropdown({
+            allowAdditions: true
+        })
+        ;
     }
 }
 class Drinks implements ng.IDirective {
@@ -72,3 +86,4 @@ class Drinks implements ng.IDirective {
 var ui = Directives.getModule();
 ui.directive("rating",()=> new Rating());
 ui.directive("drinks",()=> new Drinks());
+ui.directive("dropdown",()=> new Dropdown());

@@ -15,8 +15,8 @@
                 <div class="image">
                     <img ng-src="/images/{{popular.SuggestedCombo.Image}}">
                     <a class="ui right ribbon label" ng-class="{teal:popular.SuggestedCombo.HasCarbonation}">Carbonation</a>
-                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.SuggestedCombo.HasJuice}">Juice</a>
-
+                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:popular.SuggestedCombo.HasJuice}">Calories</a>
+                    <a class="ui right ribbon label" style="top: 102px;" ng-class="{orange:popular.SuggestedCombo.HasJuice}">Juice</a>
                 </div>
                 <div class="content">
                     <a class="header">{{popular.SuggestedCombo.Name}}</a>
@@ -42,36 +42,43 @@
             <h1>
                 Popular <i class="thumbs up icon"></i>
             </h1>
-            <div class="ui cards" ng-if="popular.DrinkCombos && popular.DrinkCombos.length >0">
-                <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos">
-                    <div class="image">
-                        <img ng-src="/images/{{item.Image}}">
-                        <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>
-                        <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:item.HasJuice}">Juice</a>
-
-                    </div>
-                    <div class="content">
-                        <a class="header">{{item.Name}}</a>
-
-                        <div class="meta">
-                            <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
-                        </div>
-                        <div class="description" style="margin-bottom: 6px;">
-                            {{item.Description}}
-                        </div>
-                        <drinks items="item.DrinksObjs"></drinks>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <!--                        <i class="huge icons">-->
-                            <!--                            <i class="big dont icon"></i>-->
-                            <!--                            <i class="cubes icon "></i>-->
-                            <!--                        </i>-->
-                        </a>
-                    </div>
+            <div class="ui segment">
+                <div ng-show="!popular.DrinkCombos" class="ui active inverted dimmer">
+                    <div class="ui text loader">Loading</div>
                 </div>
+                <div class="ui cards" ng-if="popular.Loaded">
+                    <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos">
+                        <div class="image" style="min-height: 290px">
+                            <img ng-src="/images/{{item.Image}}">
+                            <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>
+                            <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:item.HasJuice}">Calories</a>
+                            <a class="ui right ribbon label" style="top: 102px;" ng-class="{orange:item.HasJuice}">Juice</a>
 
+                        </div>
+                        <div class="content">
+                            <a class="header">{{item.Name}}</a>
+
+                            <div class="meta">
+                                <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
+                            </div>
+                            <div class="description" style="margin-bottom: 6px;">
+                                {{item.Description}}
+                            </div>
+                            <drinks items="item.DrinksObjs"></drinks>
+                        </div>
+                        <div class="extra content">
+                            <a>
+                                <!--                        <i class="huge icons">-->
+                                <!--                            <i class="big dont icon"></i>-->
+                                <!--                            <i class="cubes icon "></i>-->
+                                <!--                        </i>-->
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     </md-content>
 </div>

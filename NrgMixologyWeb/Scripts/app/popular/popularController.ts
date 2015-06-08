@@ -1,58 +1,79 @@
 ﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
+class SearchService {
+    static $inject = ["$firebaseArray", "FIREBASE_URL"];
+    SearchFilter: any;
+    Drinks: Array<IDrink>;
+
+    constructor($firebaseArray, FIREBASE_URL) {
+
+        var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
+
+        drinks.$loaded().then((result) => {
+            this.Drinks = result;
+        });
+    }
+}
+
+class SearchController {
+    static $inject = ["SearchService"];
+    Drinks: Array<IDrink>;
+    constructor(SearchService) {
+        this.Drinks = SearchService.Drinks;
+    }
+}
 
 class PopularController {
-    static $inject = ["$firebaseArray", "FIREBASE_URL"];
+    static $inject = ["$firebaseArray", "FIREBASE_URL", "SearchService"];
     DrinkCombos: Array<any>;
     Drinks: Array<IDrink>;
     SuggestedCombo = null;
-    constructor($firebaseArray, FIREBASE_URL) {
+    Loaded: boolean = true;
+    constructor($firebaseArray, FIREBASE_URL, private SearchService) {
         console.info("Loading Popular Controller");
         var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
         list.$loaded().then((result) => {
             this.DrinkCombos = result;
-
-            var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
-
-            drinks.$loaded().then((result) => {
-                this.Drinks = result;
-
-                this.DrinkCombos.forEach((combo) => {
-                    combo.DrinksObjs = this.GetDrinks(combo.Drinks);
-                    angular.extend(combo, {HasCarbonation:this.hasCarbonation(combo), HasJuice:this.hasJuice(combo)});
-                });
+            
+            this.DrinkCombos.forEach((combo) => {
+                combo.DrinksObjs = this.GetDrinks(combo.Drinks);
+                angular.extend(combo, { HasCarbonation: this.hasCarbonation(combo), HasJuice: this.hasJuice(combo), HasCalories: this.hasCalories(combo) });
+                this.Loaded = true;
             });
         });
 
     }
 
     GetDrinks(drinkIds): Array<IDrink> {
-        if (this.Drinks.length > 0) {
+        if (this.SearchService.Drinks.length > 0) {
             var ids = [];
             for (let prop in drinkIds) {
                 if (drinkIds.hasOwnProperty(prop)) {
                     ids.push(drinkIds[prop]);
                 }
             }
-            return this.Drinks.filter((drink) => { return ids.indexOf(drink.$id) >= 0 });
+            return this.SearchService.Drinks.filter((drink) => { return ids.indexOf(drink.$id) >= 0 });
         }
         return [];
     }
 
     GetRandom() {
-        this.SuggestedCombo =  this.DrinkCombos[Math.floor(Math.random() * this.DrinkCombos.length)];
+        this.SuggestedCombo = this.DrinkCombos[Math.floor(Math.random() * this.DrinkCombos.length)];
     }
 
+    private hasCalories(mixedDrink) {
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length > 0;
+    }
     private hasCarbonation(mixedDrink) {
-        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length>0;
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length > 0;
     }
     private hasJuice(mixedDrink) {
-        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.HasJuice; }).length >0 ;
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsJuice; }).length > 0;
     }
 }
 
-interface IDrink{
-    $id:string;
+interface IDrink {
+    $id: string;
     Name: string;
     Brand: string;
     IsJuice: boolean;
@@ -64,4 +85,6 @@ interface IDrink{
 ((angular) => {
     var mod = angular.module("MixologyApp.Controllers");
     mod.controller("PopularController", PopularController);
+    mod.controller("SearchController", SearchController);
+    mod.service("SearchService", SearchService);
 })(angular);
