@@ -1,4 +1,4 @@
-<div ng-controller="PopularController as popular">
+<div>
     <md-content layout="column" flex class="md-padding">
         <div class="ui right labeled animated fade icon button " ng-click="popular.GetRandom()">
             <i class="right lab icon"></i>
@@ -14,8 +14,8 @@
             <div class="ui card">
                 <div class="image">
                     <img ng-src="/images/{{popular.SuggestedCombo.Image}}">
-                    <a class="ui right ribbon label" ng-class="{teal:popular.HasCarbonation(popular.SuggestedCombo)}">Carbonation</a>
-                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.HasJuice(popular.SuggestedCombo)}">Juice</a>
+                    <a class="ui right ribbon label" ng-class="{teal:popular.SuggestedCombo.HasCarbonation}">Carbonation</a>
+                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.SuggestedCombo.HasJuice}">Juice</a>
 
                 </div>
                 <div class="content">
@@ -42,12 +42,12 @@
             <h1>
                 Popular <i class="thumbs up icon"></i>
             </h1>
-            <div class="ui cards" ng-if="popular.DrinkCombos.length >0">
+            <div class="ui cards" ng-if="popular.DrinkCombos && popular.DrinkCombos.length >0">
                 <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos">
                     <div class="image">
                         <img ng-src="/images/{{item.Image}}">
-                        <a class="ui right ribbon label" ng-class="{teal:popular.HasCarbonation(item)}">Carbonation</a>
-                        <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.HasJuice(item)}">Juice</a>
+                        <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>
+                        <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:item.HasJuice}">Juice</a>
 
                     </div>
                     <div class="content">

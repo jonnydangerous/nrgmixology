@@ -7,6 +7,7 @@ class PopularController {
     Drinks: Array<IDrink>;
     SuggestedCombo = null;
     constructor($firebaseArray, FIREBASE_URL) {
+        console.info("Loading Popular Controller");
         var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
         list.$loaded().then((result) => {
             this.DrinkCombos = result;
@@ -18,6 +19,7 @@ class PopularController {
 
                 this.DrinkCombos.forEach((combo) => {
                     combo.DrinksObjs = this.GetDrinks(combo.Drinks);
+                    angular.extend(combo, {HasCarbonation:this.hasCarbonation(combo), HasJuice:this.hasJuice(combo)});
                 });
             });
         });
@@ -41,11 +43,11 @@ class PopularController {
         this.SuggestedCombo =  this.DrinkCombos[Math.floor(Math.random() * this.DrinkCombos.length)];
     }
 
-    HasCarbonation(mixedDrink) {
-        return mixedDrink.DrinksObjs.filter((drink) => <IDrink>drink.IsCarbonated).length>0;
+    private hasCarbonation(mixedDrink) {
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length>0;
     }
-    HasJuice(mixedDrink) {
-        return mixedDrink.DrinksObjs.filter((drink) => <IDrink>drink.HasJuice).length >0 ;
+    private hasJuice(mixedDrink) {
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.HasJuice; }).length >0 ;
     }
 }
 
