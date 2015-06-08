@@ -9,7 +9,7 @@
         </div>
         <div class="ui very relaxed list">
             <h1>Popular <i class="thumbs up icon"></i></h1>
-            <div class="item" ng-repeat="item in popular.DrinkCombos" ng-if="popular.DrinkCombos.$loaded">
+            <div class="item" ng-repeat="item in popular.DrinkCombos" ng-if="popular.DrinkCombos.length>0">
                 <img class="ui avatar image" ng-src="/images/{{item.Image}}" style="position: relative;top: -30px;">
                 <div class="content">
                     <a class="header">{{item.Name}}</a>
