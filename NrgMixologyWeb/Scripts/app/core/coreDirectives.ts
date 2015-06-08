@@ -59,9 +59,11 @@ class Drinks implements ng.IDirective {
         Drinks: "=items"
     };
     public templateUrl: string = "views/drinks.html";
-    public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+    public link: ng.IDirectiveLinkFn = (scope, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
         console.info(scope.Drinks);
-    }
+
+        scope.RemoveDrink = this.RemoveDrink;
+    };
     RemoveDrink(drink) {
         console.info("Remove " + drink.Name);
     }
