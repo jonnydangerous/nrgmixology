@@ -1,24 +1,76 @@
 <div ng-controller="PopularController as popular">
     <md-content layout="column" flex class="md-padding">
-        <div class="ui right labeled animated fade icon button ">
+        <div class="ui right labeled animated fade icon button " ng-click="popular.GetRandom()">
             <i class="right lab icon"></i>
             <div class="visible content">NRG Me!</div>
             <div class="hidden content">
                 Click for random NRG combo
             </div>
         </div>
-        <div class="ui very relaxed list">
-            <h1>Popular <i class="thumbs up icon"></i></h1>
-            <div class="item" ng-repeat="item in popular.DrinkCombos" ng-if="popular.DrinkCombos.length>0">
-                <img class="ui avatar image" ng-src="/images/{{item.Image}}" style="position: relative;top: -30px;">
-                <div class="content">
-                    <a class="header">{{item.Name}}</a>
-                    <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
-                    <div class="description" style="padding: 10px 0px;">
-                        {{item.Description}}
-                    </div>
-                    <drinks items="item.DrinksObjs"></drinks>
+        <div class="ui very relaxed list" ng-if="popular.SuggestedCombo">
+            <h1>
+                Suggested <i class="thumbs up icon"></i>
+            </h1>
+            <div class="ui card">
+                <div class="image">
+                    <img ng-src="/images/{{popular.SuggestedCombo.Image}}">
+                    <a class="ui right ribbon label" ng-class="{teal:popular.HasCarbonation(popular.SuggestedCombo)}">Carbonation</a>
+                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.HasJuice(popular.SuggestedCombo)}">Juice</a>
+
                 </div>
+                <div class="content">
+                    <a class="header">{{popular.SuggestedCombo.Name}}</a>
+                    <div class="meta">
+                        <div class="ui star rating inline" rating="popular.SuggestedCombo.Rating" enabled="false"></div>
+                    </div>
+                    <div class="description" style="margin-bottom: 6px;">
+                        {{popular.SuggestedCombo.Description}}
+                    </div>
+                    <drinks items="popular.SuggestedCombo.DrinksObjs"></drinks>
+                </div>
+                <div class="extra content">
+                    <a>
+                        <!--                        <i class="huge icons">-->
+                        <!--                            <i class="big dont icon"></i>-->
+                        <!--                            <i class="cubes icon "></i>-->
+                        <!--                        </i>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui very relaxed list">
+            <h1>
+                Popular <i class="thumbs up icon"></i>
+            </h1>
+            <div class="ui cards" ng-if="popular.DrinkCombos.length >0">
+                <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos">
+                    <div class="image">
+                        <img ng-src="/images/{{item.Image}}">
+                        <a class="ui right ribbon label" ng-class="{teal:popular.HasCarbonation(item)}">Carbonation</a>
+                        <a class="ui right ribbon label" style="top: 58px;" ng-class="{orange:popular.HasJuice(item)}">Juice</a>
+
+                    </div>
+                    <div class="content">
+                        <a class="header">{{item.Name}}</a>
+
+                        <div class="meta">
+                            <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
+                        </div>
+                        <div class="description" style="margin-bottom: 6px;">
+                            {{item.Description}}
+                        </div>
+                        <drinks items="item.DrinksObjs"></drinks>
+                    </div>
+                    <div class="extra content">
+                        <a>
+                            <!--                        <i class="huge icons">-->
+                            <!--                            <i class="big dont icon"></i>-->
+                            <!--                            <i class="cubes icon "></i>-->
+                            <!--                        </i>-->
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </md-content>

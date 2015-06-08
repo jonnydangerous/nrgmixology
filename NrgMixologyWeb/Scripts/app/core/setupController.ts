@@ -8,32 +8,33 @@ class SetupController {
 
         var drink1, drink2;
             drinks.$add({
-            Brand: "Rockstar",
-            Name: "Lime Freeze",
-            IsJuice: true,
-            HasCalories: true,
+            Brand: "Monster",
+            Name: "Ultra Red",
+            IsJuice: false,
+            HasCalories: false,
             IsCarbonated: true,
-            Description:"So limey",
-            Image:"lime-freeze_1.jpg"
+            Description:"Red-rum, red-rum",
+            Image:"monster-ultra-red.jpg"
             }).then((result) => {
                 drink1 = result.key();
             });
         drinks.$add({
-            Brand: "NOS",
-            Name: "Grap",
+            Brand: "Monster",
+            Name: "Ultra Citron",
             IsJuice: false,
-            HasCalories: true,
+            HasCalories: false,
             IsCarbonated: true,
-            Description: "Grape-ly good",
-            Image:"nos_grape.jpg"
+            Description: "Energy infused lemon",
+            Image:"Monster-Energy-Ultra-Citron-Flavor.jpg"
        }).then((result) => {
             drink2 = result.key();
         });        
         var combo = combos.$add({
             Drinks:[null],
-            Name: "Lime Ricky",
-            Rating: 5,
-            Description: "Such lime so rick"
+            Name: "Iron Man",
+            Rating: 4,
+            Description: "I am Iron Man!",
+            Image:"ironman_III.png"
         }).then((result) => {
             console.info(result);
                 var drinkCombo = $firebaseArray(new Firebase("https://nrgmixology.firebaseio.com/combos/" + result.key()+ "/Drinks"));
