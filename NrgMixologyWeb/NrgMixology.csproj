@@ -660,6 +660,7 @@
     <Content Include="bower_components\semantic-ui\tasks\rtl\watch.js" />
     <Content Include="bower_components\semantic-ui\tasks\version.js" />
     <Content Include="bower_components\semantic-ui\tasks\watch.js" />
+    <Content Include="tests\popularControllerTests.js" />
     <Content Include="views\admin.html" />
     <Content Include="views\drinks.html" />
     <Content Include="views\dropdown.html" />

@@ -39,7 +39,7 @@ class PopularController {
     }
 
     private hasCalories(mixedDrink) {
-        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length > 0;
+        return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.HasCalories; }).length > 0;
     }
     private hasCarbonation(mixedDrink) {
         return mixedDrink.DrinksObjs.filter((drink) => { return <IDrink>drink.IsCarbonated; }).length > 0;
