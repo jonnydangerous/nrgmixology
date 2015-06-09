@@ -1,32 +1,9 @@
 ﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
-class SearchService {
-    static $inject = ["$firebaseArray", "FIREBASE_URL"];
-    SearchFilter: any;
-    Drinks: Array<IDrink>;
-
-    constructor($firebaseArray, FIREBASE_URL) {
-
-        var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
-
-        drinks.$loaded().then((result) => {
-            this.Drinks = result;
-        });
-    }
-}
-
-class SearchController {
-    static $inject = ["SearchService"];
-    Drinks: Array<IDrink>;
-    constructor(SearchService) {
-        this.Drinks = SearchService.Drinks;
-    }
-}
 
 class PopularController {
     static $inject = ["$firebaseArray", "FIREBASE_URL", "SearchService"];
     DrinkCombos: Array<any>;
-    Drinks: Array<IDrink>;
     SuggestedCombo = null;
     Loaded: boolean = true;
     constructor($firebaseArray, FIREBASE_URL, private SearchService) {
@@ -85,6 +62,4 @@ interface IDrink {
 ((angular) => {
     var mod = angular.module("MixologyApp.Controllers");
     mod.controller("PopularController", PopularController);
-    mod.controller("SearchController", SearchController);
-    mod.service("SearchService", SearchService);
 })(angular);

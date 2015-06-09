@@ -57,14 +57,18 @@ class Rating implements ng.IDirective {
 class Dropdown implements ng.IDirective {
     public restrict: string = "E";
     public scope = {
-        Values: "=items"
+        Drinks: "=items"
     };
     public templateUrl:string="views/dropdown.html";
-    public link: ng.IDirectiveLinkFn = (scope: IRating, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
-        element.dropdown({
-            allowAdditions: true
-        })
-        ;
+    public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+        scope.$watch(() => scope.Drinks, (newValue, oldValue) => {
+            if (newValue && newValue.length > 0) {
+                element.dropdown({
+                    allowAdditions: true
+                });
+            }
+        });
+        
     }
 }
 class Drinks implements ng.IDirective {

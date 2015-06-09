@@ -672,6 +672,8 @@
     <TypeScriptCompile Include="Scripts\app\admin\adminController.ts" />
     <TypeScriptCompile Include="Scripts\app\core\coreDirectives.ts" />
     <TypeScriptCompile Include="Scripts\app\core\registerControllers.ts" />
+    <TypeScriptCompile Include="Scripts\app\core\searchController.ts" />
+    <TypeScriptCompile Include="Scripts\app\core\searchService.ts" />
     <TypeScriptCompile Include="Scripts\app\core\setupController.ts" />
     <TypeScriptCompile Include="Scripts\app\popular\popularController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
