@@ -20,25 +20,25 @@ class SetupController {
             });
         drinks.$add({
             Brand: "Monster",
-            Name: "Ultra Citron",
+            Name: "Ultra Sunrise",
             IsJuice: false,
             HasCalories: false,
             IsCarbonated: true,
-            Description: "Energy infused lemon",
-            Image:"Monster-Energy-Ultra-Citron-Flavor.jpg"
+            Description: "Subtle flavor face slam, like being punched in the face by a butterfly infused sun beam",
+            Image:"monster-ultra-sunrise.jpg"
        }).then((result) => {
             drink2 = result.key();
         });        
         var combo = combos.$add({
             Drinks:[null],
-            Name: "Iron Man",
+            Name: "Sherbert",
             Rating: 4,
-            Description: "I am Iron Man!",
-            Image:"ironman_III.png"
+            Description: "Leaves you wanting MOAR!",
+            Image:"Rainbow.jpg"
         }).then((result) => {
             console.info(result);
                 var drinkCombo = $firebaseArray(new Firebase("https://nrgmixology.firebaseio.com/combos/" + result.key()+ "/Drinks"));
-                drinkCombo.$add(drink1);
+//                drinkCombo.$add(drink1);
                 drinkCombo.$add(drink2);
         });
         

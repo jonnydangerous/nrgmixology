@@ -1,30 +1,35 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../../typings/firebase/firebase.d.ts" />
 var PopularController = (function () {
-    function PopularController($firebaseArray, FIREBASE_URL) {
+    function PopularController($scope, SearchService) {
         var _this = this;
-        var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
-        list.$loaded().then(function (result) {
-            _this.DrinkCombos = result;
-            var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
-            drinks.$loaded().then(function (result) {
-                _this.Drinks = result;
-                _this.DrinkCombos.forEach(function (combo) {
-                    combo.DrinksObjs = _this.GetDrinks(combo.Drinks);
-                });
-            });
+        this.SearchService = SearchService;
+        this.SuggestedCombo = null;
+        this.Loaded = true;
+        this.Filter = null;
+        console.info("Loading Popular Controller");
+        //        this.service = SearchService;
+        this.Filter = SearchService.Filter;
+        $scope.$watch(function () { return SearchService.Loaded; }, function (newValue) {
+            if (newValue != undefined) {
+                _this.Loaded = SearchService.Loaded;
+            }
+        });
+        $scope.$watch(function () { return SearchService.Combos; }, function (newValue) {
+            if (newValue != undefined) {
+                _this.DrinkCombos = SearchService.Combos;
+            }
+        });
+        $scope.$watch(function () { return SearchService.Filter; }, function (newValue) {
+            //            if (newValue != undefined) {
+            //                $scope.$apply();
+            //            }
         });
     }
-    PopularController.prototype.GetDrinks = function (drinkIds) {
-        if (this.Drinks.length > 0) {
-            var ids = [];
-            for (var prop in drinkIds) {
-                ids.push(drinkIds[prop]);
-            }
-            return this.Drinks.filter(function (drink) { return ids.indexOf(drink.$id) >= 0; });
-        }
+    PopularController.prototype.GetRandom = function () {
+        this.SuggestedCombo = this.DrinkCombos[Math.floor(Math.random() * this.DrinkCombos.length)];
     };
-    PopularController.$inject = ["$firebaseArray", "FIREBASE_URL"];
+    PopularController.$inject = ["$scope", "SearchService"];
     return PopularController;
 })();
 (function (angular) {

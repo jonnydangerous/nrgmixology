@@ -1,4 +1,28 @@
-﻿<select class="ui fluid search dropdown" ng-options="item.Name for item in Drinks">
-</select>
-<!--<select class="ui fluid search dropdown" ng-options="item.Brand+':'+ item.Name as item.label for item in Values">-->
-<!--</select>-->
+﻿<div class="ui floating dropdown labeled icon button">
+    <i class="filter icon"></i>
+    <span class="text">Filter Drinks</span>
+    <div class="menu">
+        <div class="ui icon search input">
+            <i class="search icon"></i>
+            <input type="text" name="search" placeholder="Search drinks...">
+        </div>
+        <div class="divider"></div>
+        <div class="header">
+            <i class="tags icon"></i>
+            Tag Label
+        </div>
+        <div class="item">
+            <div class="ui teal empty circular label"></div>
+            Has Carbonation
+        </div>
+        <div class="item">
+            <div class="ui yellow empty circular label"></div>
+            Has Calories
+        </div>
+        <div class="item">
+            <div class="ui orange empty circular label"></div>
+            Has Juice
+        </div>
+
+    </div>
+</div>

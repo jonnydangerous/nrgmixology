@@ -1,26 +1,4 @@
 ﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
-
-//module Ui {
-//    'use strict';
-//    export function RatingDirective(): ng.IDirective {
-//        return {
-//            restrict: 'A',
-//            scope: { Rating: "=rating", Enabled: "=enabled" }, // use controller scope
-//            link: (scope: IRating, element: ISemantic, attributes) => {
-//                element.rating({
-//                    initialRating: scope.Rating,
-//                    maxRating: 5,
-//                    interactive: scope.Enabled
-//                });
-//            }
-//        }
-//    };
-//}
-//module Ui {
-//    'use strict';
-//    angular.module('MixologyApp.Directives', [])
-//        .directive('rating', Ui.RatingDirective);
-//}
 module Directives {
     "use strict";
     angular.module("MixologyApp.Directives", []);
@@ -34,6 +12,7 @@ interface IRating extends ng.IScope {
 }
 interface IDrinks extends ng.IScope {
     Drinks: Array<any>;
+    OnFilter:Function;
 }
 
 interface ISemantic extends ng.IAugmentedJQuery {
@@ -57,19 +36,29 @@ class Rating implements ng.IDirective {
 class Dropdown implements ng.IDirective {
     public restrict: string = "E";
     public scope = {
-        Drinks: "=items"
+        Drinks: "=items",
+        OnFilter:"&select"
     };
+    public replace = true;
     public templateUrl:string="views/dropdown.html";
     public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
-        scope.$watch(() => scope.Drinks, (newValue, oldValue) => {
-            if (newValue && newValue.length > 0) {
-                element.dropdown({
-                    allowAdditions: true
-                });
-            }
+        
+        element.dropdown({
+            transition: "drop",
+            onChange:  (text, value, $selected) => {
+                scope.OnFilter()($selected.text().trim());
+            } 
         });
+
+//        scope.$watch(() => scope.Drinks, (newValue, oldValue) => {
+//            if (newValue && newValue.length > 0) {
+//               
+//            }
+//        });
         
     }
+
+    OnChange() {}
 }
 class Drinks implements ng.IDirective {
     public restrict: string = "E";
@@ -78,8 +67,6 @@ class Drinks implements ng.IDirective {
     };
     public templateUrl: string = "views/drinks.html";
     public link: ng.IDirectiveLinkFn = (scope, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
-        console.info(scope.Drinks);
-
         scope.RemoveDrink = this.RemoveDrink;
     };
     RemoveDrink(drink) {
@@ -87,7 +74,9 @@ class Drinks implements ng.IDirective {
     }
 }
 
-var ui = Directives.getModule();
-ui.directive("rating",()=> new Rating());
-ui.directive("drinks",()=> new Drinks());
-ui.directive("dropdown",()=> new Dropdown());
+(() => {
+    var ui = Directives.getModule();
+    ui.directive("rating", () => new Rating());
+    ui.directive("drinks", () => new Drinks());
+    ui.directive("dropdown", () => new Dropdown());
+})();

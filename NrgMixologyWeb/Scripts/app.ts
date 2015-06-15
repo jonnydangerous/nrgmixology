@@ -5,7 +5,7 @@ class MixologyApp {
     module;
     constructor() {
         console.info("Starting App");
-        this.module = angular.module("MixologyApp", ["ngRoute", "ngMaterial", "MixologyApp.Core","MixologyApp.Services", "MixologyApp.Controllers", "MixologyApp.Directives"]);
+        this.module = angular.module("MixologyApp", ["ngRoute", "ngMaterial","MixologyApp.Services", "MixologyApp.Controllers", "MixologyApp.Directives"]);
     }
 
     Constant(key, value) {
@@ -14,9 +14,9 @@ class MixologyApp {
 }
 
 var app = new MixologyApp();
-app.Constant("FIREBASE_URL", "https://nrgmixology.firebaseio.com/");
-app.module.config(["$routeProvider", "$locationProvider", ($routeProvider: angular.route.IRouteProvider, $locationProvider: ng.ILocationProvider) => {
-        $routeProvider.when("/", {
+app.module.config(["$routeProvider", "$locationProvider","$mdThemingProvider", ($routeProvider: angular.route.IRouteProvider, $locationProvider: ng.ILocationProvider, $mdThemingProvider) => {
+    $mdThemingProvider.theme("default").primaryPalette("blue", { 'default': '500'});
+    $routeProvider.when("/", {
             templateUrl: "/views/popular.html",
             controller: "PopularController",
             controllerAs: "popular"

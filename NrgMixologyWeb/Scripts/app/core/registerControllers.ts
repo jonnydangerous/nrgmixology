@@ -1,6 +1,8 @@
 ﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
 
 ((angular) => {
-    angular.module("MixologyApp.Services", ["firebase"]);
-    angular.module("MixologyApp.Controllers", ["firebase","MixologyApp.Services"]);
+    var services = angular.module("MixologyApp.Services", ["firebase"]);
+    services.constant("FIREBASE_URL", "https://nrgmixology.firebaseio.com/");
+
+    angular.module("MixologyApp.Controllers", ["MixologyApp.Services"]);
 })(angular);

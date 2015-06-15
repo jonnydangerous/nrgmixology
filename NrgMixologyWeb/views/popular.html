@@ -15,7 +15,7 @@
                 <div class="image">
                     <img ng-src="/images/{{popular.SuggestedCombo.Image}}">
                     <a class="ui right ribbon label" ng-class="{teal:popular.SuggestedCombo.HasCarbonation}">Carbonation</a>
-                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:popular.SuggestedCombo.HasJuice}">Calories</a>
+                    <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:popular.SuggestedCombo.HasCalories}">Calories</a>
                     <a class="ui right ribbon label" style="top: 102px;" ng-class="{orange:popular.SuggestedCombo.HasJuice}">Juice</a>
                 </div>
                 <div class="content">
@@ -47,11 +47,11 @@
                     <div class="ui text loader">Loading</div>
                 </div>
                 <div class="ui cards" ng-if="popular.Loaded">
-                    <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos">
+                    <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos | filter:popular.Filter">
                         <div class="image" style="min-height: 290px">
                             <img ng-src="/images/{{item.Image}}">
                             <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>
-                            <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:item.HasJuice}">Calories</a>
+                            <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:item.HasCalories}">Calories</a>
                             <a class="ui right ribbon label" style="top: 102px;" ng-class="{orange:item.HasJuice}">Juice</a>
 
                         </div>
