@@ -1,27 +1,27 @@
-﻿<div class="ui floating dropdown labeled icon button">
-    <i class="filter icon"></i>
-    <span class="text">Filter Drinks</span>
+﻿<div class="ui floating labeled">
+    <div class="ui horizontal divider">
+        <i class="filter icon"></i>
+        <span class="text">Filter Drinks</span>
+    </div>
     <div class="menu">
-        <div class="ui icon search input">
-            <i class="search icon"></i>
-            <input type="text" name="search" placeholder="Search drinks...">
-        </div>
-        <div class="divider"></div>
-        <div class="header">
-            <i class="tags icon"></i>
-            Tag Label
+        <div class="item">
+            <div class="ui slider checkbox">
+                <input type="checkbox" name="public" ng-model="search.Filter.HasCarbonation" ng-change="search.FilterDrinks()">
+                <label>Has Carbonation <div class="ui teal outline empty circular  label"></div></label>
+            </div>
         </div>
         <div class="item">
-            <div class="ui teal empty circular label"></div>
-            Has Carbonation
+            <div class="ui slider checkbox">
+                <input type="checkbox" name="public" ng-model="search.Filter.HasCalories">
+                <label> Has Calories <div class="ui yellow outline empty circular  label"></div></label>
+            </div>
         </div>
         <div class="item">
-            <div class="ui yellow empty circular label"></div>
-            Has Calories
-        </div>
-        <div class="item">
-            <div class="ui orange empty circular label"></div>
-            Has Juice
+            <div class="ui slider checkbox">
+                <input type="checkbox" name="public" ng-model="search.Filter.HasJuice">
+                <label> Has Juice <div class="ui orange outline empty circular  label"></div></label>
+            </div>
+           
         </div>
 
     </div>

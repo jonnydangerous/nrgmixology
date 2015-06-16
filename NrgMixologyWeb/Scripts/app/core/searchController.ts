@@ -6,21 +6,30 @@
         console.info("Loading Search Controller");
         this.Drinks = SearchService.Drinks;
         this.Filter = SearchService.Filter;
+        $scope.$watch(()=>this.Filter, (newValue) => {
+            console.info(newValue);
+        },true);
     }
 
-    FilterDrinks = (filter)=> {
-        switch (filter) {
-        case "Has Carbonation":
-                this.Filter = { HasCarbonation: true };
-            break;
-        case "Has Juice":
-                this.Filter = { HasJuice: true };
-            break;
-        case "Has Calories":
-                this.Filter = { HasCalories: true };
-            break;
-        default:
-        }
+    FilterDrinks() {
+//        switch (filter) {
+//        case "Has Carbonation":
+//                this.SearchService.Filter = { HasCarbonation: true };
+//                this.SearchService.FilterCombo();
+//
+//            break;
+//        case "Has Juice":
+//                this.SearchService.Filter = { HasJuice: true };
+//                this.SearchService.FilterCombo();
+//
+//            break;
+//        case "Has Calories":
+//                this.SearchService.Filter = { HasCalories: true };
+//            this.SearchService.FilterCombo();
+//            break;
+//        default:
+//        }
+        this.SearchService.FilterCombo();
     }
 }
 ((angular) => {

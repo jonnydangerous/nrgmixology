@@ -47,7 +47,7 @@
                     <div class="ui text loader">Loading</div>
                 </div>
                 <div class="ui cards" ng-if="popular.Loaded">
-                    <div class="ui card" style="margin: 8px;" ng-repeat="item in popular.DrinkCombos | filter:popular.Filter">
+                    <div class="ui card " style="margin: 8px; display: none;" ng-repeat="item in popular.DrinkCombos" rotate>
                         <div class="image" style="min-height: 290px">
                             <img ng-src="/images/{{item.Image}}">
                             <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>

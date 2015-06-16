@@ -14,19 +14,19 @@ interface ICombo {
     Drinks: Array<any>;
 }
 class SearchService {
-    static $inject = ["$firebaseArray", "FIREBASE_URL"];
+    static $inject = ["$firebaseArray", "FIREBASE_URL", "$filter","$rootScope"];
+    private _origCombos:Array<ICombo> = [];
     SearchFilter: any;
     Drinks: Array<IDrink>=[];
     Combos: Array<ICombo>=[];
     Loaded: boolean = false;
-    Filter=undefined;
+    Filter={HasJuice:null};
 
-    constructor($firebaseArray, FIREBASE_URL) {
+    constructor($firebaseArray, FIREBASE_URL,private $filter,private $rootScope) {
         console.info("Loading Search Service");
         var drinks = $firebaseArray(new Firebase(FIREBASE_URL + "drinks"));
         var list = $firebaseArray(new Firebase(FIREBASE_URL + "combos"));
         this.fetchData(drinks, list);
-
     }
 
     private fetchData(drinks, list) {
@@ -39,9 +39,15 @@ class SearchService {
                     combo.DrinksObjs = this.GetDrinks(combo.Drinks);
                     angular.extend(combo, { HasCarbonation: this.hasCarbonation(combo), HasJuice: this.hasJuice(combo), HasCalories: this.hasCalories(combo) });
                 });
+                this._origCombos = angular.copy(this.Combos);
                 this.Loaded = true;
             });
         });
+    }
+
+    FilterCombo() {
+        this.Combos = this.$filter("filter")(this._origCombos, this.Filter);
+        this.$rootScope.$broadcast("update_drinks");
     }
 
     GetDrinks(drinkIds): Array<IDrink> {

@@ -27,9 +27,9 @@
     <script src="../scripts/app.js"></script>
 </head>
 <body>
-    <md-toolbar layout="row">
+    <md-toolbar layout="row" ng-controller="CoreController as core ">
         <div class="md-toolbar-tools">
-            <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button">
+            <md-button ng-click="core.toggleSidenav('left')" hide-gt-md class="md-icon-button">
                 <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
             </md-button>
             <h1><i class="lightning icon"></i>NRG Mixology</h1>
@@ -38,15 +38,7 @@
     <div layout="row" layout="vertical" layout-fill>
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
             <div class="ui vertical menu" style="width: 100%;height: 100%;">
-                <div class="item">
-                    <md-input-container style="padding: 0;" >
-                        <label>Search NRG Mixes</label>
-                        <input ng-model="Search">
-                    </md-input-container>
-                </div>
-                <div class="item" ng-controller="SearchController as search">
-                    <dropdown items="search.Drinks" select="search.FilterDrinks" ></dropdown>
-                </div>
+
                 <a class="item" href="/">
                     <i class="home icon"></i> Home
                 </a>
@@ -64,6 +56,42 @@
                 <a class="item">
                     <i class="mail icon"></i> Messages
                 </a>
+                <div class="item">
+                    <md-input-container style="padding: 0;">
+                        <label>Search NRG Mixes</label>
+                        <input ng-model="Search">
+                    </md-input-container>
+                </div>
+                <div class="item" ng-controller="SearchController as search">
+                    <div class="ui floating labeled">
+                        <div class="ui horizontal divider">
+                            <i class="filter icon"></i>
+                            <span class="text">Filter Drinks</span>
+                        </div>
+                        <div class="menu">
+                            <div class="item">
+                                <div class="ui slider checkbox" checkbox="search.Filter.HasCarbonation">
+                                    <input type="checkbox" name="public" >
+                                    <label>Has Carbonation <div class="ui teal outline empty circular  label"></div></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui slider checkbox" checkbox="search.Filter.HasCalories">
+                                    <input type="checkbox" name="public" >
+                                    <label> Has Calories <div class="ui yellow outline empty circular  label"></div></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui slider checkbox" checkbox="search.Filter.HasJuice">
+                                    <input type="checkbox" name="public" >
+                                    <label> Has Juice <div class="ui orange outline empty circular  label"></div></label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </md-sidenav>
         <div layout="column" flex ng-view>

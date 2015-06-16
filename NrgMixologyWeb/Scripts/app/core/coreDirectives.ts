@@ -14,10 +14,15 @@ interface IDrinks extends ng.IScope {
     Drinks: Array<any>;
     OnFilter:Function;
 }
+interface IFIlter extends ng.IScope {
+ CheckedModel: boolean;
+}
 
 interface ISemantic extends ng.IAugmentedJQuery {
     rating: Function;
-    dropdown:Function;
+    dropdown: Function;
+    transition:Function;
+    checkbox:Function;
 }
 
 class Rating implements ng.IDirective {
@@ -33,29 +38,27 @@ class Rating implements ng.IDirective {
         });
     }
 }
-class Dropdown implements ng.IDirective {
-    public restrict: string = "E";
-    public scope = {
-        Drinks: "=items",
-        OnFilter:"&select"
-    };
-    public replace = true;
-    public templateUrl:string="views/dropdown.html";
-    public link: ng.IDirectiveLinkFn = (scope: IDrinks, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
-        
-        element.dropdown({
-            transition: "drop",
-            onChange:  (text, value, $selected) => {
-                scope.OnFilter()($selected.text().trim());
-            } 
-        });
+class Checkbox implements ng.IDirective {
+    public restrict: string = "A";
+    public scope= { CheckedModel: "=checkbox" };
+    public link: ng.IDirectiveLinkFn = (scope: IFIlter, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+        var local = scope;
+        element.checkbox({ onChecked: () => {
+             scope.CheckedModel = true;
+        }, onUnchecked: () => { scope.CheckedModel = false; } });
+//        element.dropdown({
+//            transition: "drop",
+//            onChange:  (text, value, $selected) => {
+//                scope.OnFilter()($selected.text().trim());
+//            } 
+//        });
 
 //        scope.$watch(() => scope.Drinks, (newValue, oldValue) => {
 //            if (newValue && newValue.length > 0) {
 //               
 //            }
 //        });
-        
+
     }
 
     OnChange() {}
@@ -73,10 +76,25 @@ class Drinks implements ng.IDirective {
         console.info("Remove " + drink.Name);
     }
 }
+class Rotate implements ng.IDirective {
+    static $inject = ["$timeout"];
+    public restrict: string = "A";
+
+//    constructor(private $timeout) {}
+
+    public link: ng.IDirectiveLinkFn = (scope, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+        setTimeout(() => {
+        element.transition({ animation: 'horizontal flip in', duration: 800 });
+            
+        }, 500);
+//        element.transition('horizontal flip in');
+    };
+}
 
 (() => {
     var ui = Directives.getModule();
     ui.directive("rating", () => new Rating());
     ui.directive("drinks", () => new Drinks());
-    ui.directive("dropdown", () => new Dropdown());
+    ui.directive("checkbox", () => new Checkbox());
+    ui.directive("rotate", () => new Rotate());
 })();

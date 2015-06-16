@@ -21,13 +21,14 @@ class PopularController {
                 this.DrinkCombos = SearchService.Combos;
             }
         });
-        $scope.$watch(() => SearchService.Filter, (newValue) => {
+        $scope.$watch(() => this.SearchService.Filter, (newValue) => {
 
 //            if (newValue != undefined) {
 //                $scope.$apply();
 //            }
         });
-        
+        $scope.$on("update_drinks", () => {$scope.$apply()});
+
     }
     
     GetRandom() {

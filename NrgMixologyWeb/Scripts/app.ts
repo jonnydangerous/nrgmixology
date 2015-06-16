@@ -29,3 +29,26 @@ app.module.config(["$routeProvider", "$locationProvider","$mdThemingProvider", (
         $locationProvider.html5Mode({ enabled: true, requireBase: false});
     }
 ]);
+
+class CoreController {
+    static $inject = ["$mdUtil", '$mdSidenav'];
+
+    constructor(private $mdUtil, private $mdSidenav) {
+        console.info("Loading Core");
+    }
+
+    toggleSidenav = this.buildToggler('left');
+    
+    buildToggler(navID) {
+        var debounceFn = this.$mdUtil.debounce(() => {
+            this.$mdSidenav(navID)
+                .toggle();
+
+        }, 300);
+        return debounceFn;
+    }
+}
+((angular) => {
+    var mod = angular.module("MixologyApp");
+    mod.controller("CoreController", CoreController);
+})(angular);
