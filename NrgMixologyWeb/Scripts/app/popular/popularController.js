@@ -20,11 +20,12 @@ var PopularController = (function () {
                 _this.DrinkCombos = SearchService.Combos;
             }
         });
-        $scope.$watch(function () { return SearchService.Filter; }, function (newValue) {
+        $scope.$watch(function () { return _this.SearchService.Filter; }, function (newValue) {
             //            if (newValue != undefined) {
             //                $scope.$apply();
             //            }
         });
+        $scope.$on("update_drinks", function () { $scope.$apply(); });
     }
     PopularController.prototype.GetRandom = function () {
         this.SuggestedCombo = this.DrinkCombos[Math.floor(Math.random() * this.DrinkCombos.length)];

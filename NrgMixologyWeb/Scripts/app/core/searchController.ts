@@ -1,4 +1,7 @@
-﻿class SearchController {
+﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/firebase/firebase.d.ts" />
+
+class SearchController {
     static $inject = ["$scope","SearchService"];
     Drinks: Array<IDrink>;
     Filter = undefined;

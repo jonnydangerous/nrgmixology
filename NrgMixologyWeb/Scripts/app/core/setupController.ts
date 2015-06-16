@@ -1,4 +1,6 @@
-﻿
+﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/firebase/firebase.d.ts" />
+
 class SetupController {
     static $inject = ["$firebaseArray"];
 

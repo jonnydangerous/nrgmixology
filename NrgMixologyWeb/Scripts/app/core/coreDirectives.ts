@@ -14,7 +14,7 @@ interface IDrinks extends ng.IScope {
     Drinks: Array<any>;
     OnFilter:Function;
 }
-interface IFIlter extends ng.IScope {
+interface IFilter extends ng.IScope {
  CheckedModel: boolean;
 }
 
@@ -41,7 +41,7 @@ class Rating implements ng.IDirective {
 class Checkbox implements ng.IDirective {
     public restrict: string = "A";
     public scope= { CheckedModel: "=checkbox" };
-    public link: ng.IDirectiveLinkFn = (scope: IFIlter, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
+    public link: ng.IDirectiveLinkFn = (scope: IFilter, element: ISemantic, attrs: ng.IAttributes, ngModel: any) => {
         var local = scope;
         element.checkbox({ onChecked: () => {
              scope.CheckedModel = true;

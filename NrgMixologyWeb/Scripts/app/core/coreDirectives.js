@@ -1,25 +1,4 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
-//module Ui {
-//    'use strict';
-//    export function RatingDirective(): ng.IDirective {
-//        return {
-//            restrict: 'A',
-//            scope: { Rating: "=rating", Enabled: "=enabled" }, // use controller scope
-//            link: (scope: IRating, element: ISemantic, attributes) => {
-//                element.rating({
-//                    initialRating: scope.Rating,
-//                    maxRating: 5,
-//                    interactive: scope.Enabled
-//                });
-//            }
-//        }
-//    };
-//}
-//module Ui {
-//    'use strict';
-//    angular.module('MixologyApp.Directives', [])
-//        .directive('rating', Ui.RatingDirective);
-//}
 var Directives;
 (function (Directives) {
     "use strict";
@@ -44,15 +23,41 @@ var Rating = (function () {
     }
     return Rating;
 })();
+var Checkbox = (function () {
+    function Checkbox() {
+        this.restrict = "A";
+        this.scope = { CheckedModel: "=checkbox" };
+        this.link = function (scope, element, attrs, ngModel) {
+            var local = scope;
+            element.checkbox({ onChecked: function () {
+                    scope.CheckedModel = true;
+                }, onUnchecked: function () { scope.CheckedModel = false; } });
+            //        element.dropdown({
+            //            transition: "drop",
+            //            onChange:  (text, value, $selected) => {
+            //                scope.OnFilter()($selected.text().trim());
+            //            } 
+            //        });
+            //        scope.$watch(() => scope.Drinks, (newValue, oldValue) => {
+            //            if (newValue && newValue.length > 0) {
+            //               
+            //            }
+            //        });
+        };
+    }
+    Checkbox.prototype.OnChange = function () { };
+    return Checkbox;
+})();
 var Drinks = (function () {
     function Drinks() {
+        var _this = this;
         this.restrict = "E";
         this.scope = {
             Drinks: "=items"
         };
         this.templateUrl = "views/drinks.html";
         this.link = function (scope, element, attrs, ngModel) {
-            console.info(scope.Drinks);
+            scope.RemoveDrink = _this.RemoveDrink;
         };
     }
     Drinks.prototype.RemoveDrink = function (drink) {
@@ -60,7 +65,25 @@ var Drinks = (function () {
     };
     return Drinks;
 })();
-var ui = Directives.getModule();
-ui.directive("rating", function () { return new Rating(); });
-ui.directive("drinks", function () { return new Drinks(); });
+var Rotate = (function () {
+    function Rotate() {
+        this.restrict = "A";
+        //    constructor(private $timeout) {}
+        this.link = function (scope, element, attrs, ngModel) {
+            setTimeout(function () {
+                element.transition({ animation: 'horizontal flip in', duration: 800 });
+            }, 500);
+            //        element.transition('horizontal flip in');
+        };
+    }
+    Rotate.$inject = ["$timeout"];
+    return Rotate;
+})();
+(function () {
+    var ui = Directives.getModule();
+    ui.directive("rating", function () { return new Rating(); });
+    ui.directive("drinks", function () { return new Drinks(); });
+    ui.directive("checkbox", function () { return new Checkbox(); });
+    ui.directive("rotate", function () { return new Rotate(); });
+})();
 //# sourceMappingURL=coreDirectives.js.map

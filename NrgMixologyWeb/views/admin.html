@@ -2,14 +2,29 @@
     <md-content layout="column" flex class="md-padding">
         <div class="ui very relaxed list">
             <h1>Manage Drinks <i class="lab icon"></i></h1>
-            <div class="item" ng-repeat="item in admin.DrinkCombos">
-                <img class="ui avatar image" ng-src="/images/{{item.Image}}">
-                <div class="content">
-                    <a class="header">{{item.Name}}</a>
-                    <div class="ui star rating" rating="item.Rating" enabled="false"></div>
-                    <div class="description">{{item.Description}}
+            <div class="ui cards" ng-if="admin.DrinkCombos">
+                <div class="ui card" style="margin: 8px; display: none;" ng-repeat="item in admin.DrinkCombos" rotate>
+                    <div class="image" style="min-height: 290px">
+                        <img ng-src="/images/{{item.Image}}">
+                        <a class="ui right ribbon label" ng-class="{teal:item.HasCarbonation}">Carbonation</a>
+                        <a class="ui right ribbon label" style="top: 58px;" ng-class="{yellow:item.HasCalories}">Calories</a>
+                        <a class="ui right ribbon label" style="top: 102px;" ng-class="{orange:item.HasJuice}">Juice</a>
+
                     </div>
-                    <drinks items="item.DrinksObjs"></drinks>
+                    <div class="content">
+                        <a class="header">{{item.Name}}</a>
+
+                        <div class="meta">
+                            <div class="ui star rating inline" rating="item.Rating" enabled="false"></div>
+                        </div>
+                        <div class="description" style="margin-bottom: 6px;">
+                            {{item.Description}}
+                        </div>
+                        <drinks items="item.DrinksObjs"></drinks>
+                    </div>
+                    <div class="extra content">
+
+                    </div>
                 </div>
             </div>
         </div>

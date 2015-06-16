@@ -1,4 +1,7 @@
-﻿interface IDrink {
+﻿/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/firebase/firebase.d.ts" />
+
+interface IDrink {
     $id: string;
     Name: string;
     Brand: string;

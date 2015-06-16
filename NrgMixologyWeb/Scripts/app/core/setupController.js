@@ -1,3 +1,5 @@
+/// <reference path="../../typings/angularjs/angular.d.ts" />
+/// <reference path="../../typings/firebase/firebase.d.ts" />
 var SetupController = (function () {
     function SetupController($firebaseArray) {
         this.$firebaseArray = $firebaseArray;
@@ -5,36 +7,37 @@ var SetupController = (function () {
         var drinks = $firebaseArray(new Firebase("https://nrgmixology.firebaseio.com/drinks"));
         var drink1, drink2;
         drinks.$add({
-            Brand: "Rockstar",
-            Name: "Lime Freeze",
-            IsJuice: true,
-            HasCalories: true,
+            Brand: "Monster",
+            Name: "Ultra Red",
+            IsJuice: false,
+            HasCalories: false,
             IsCarbonated: true,
-            Description: "So limey",
-            Image: "lime-freeze_1.jpg"
+            Description: "Red-rum, red-rum",
+            Image: "monster-ultra-red.jpg"
         }).then(function (result) {
             drink1 = result.key();
         });
         drinks.$add({
-            Brand: "NOS",
-            Name: "Grap",
+            Brand: "Monster",
+            Name: "Ultra Sunrise",
             IsJuice: false,
-            HasCalories: true,
+            HasCalories: false,
             IsCarbonated: true,
-            Description: "Grape-ly good",
-            Image: "nos_grape.jpg"
+            Description: "Subtle flavor face slam, like being punched in the face by a butterfly infused sun beam",
+            Image: "monster-ultra-sunrise.jpg"
         }).then(function (result) {
             drink2 = result.key();
         });
         var combo = combos.$add({
             Drinks: [null],
-            Name: "Lime Ricky",
-            Rating: 5,
-            Description: "Such lime so rick"
+            Name: "Sherbert",
+            Rating: 4,
+            Description: "Leaves you wanting MOAR!",
+            Image: "Rainbow.jpg"
         }).then(function (result) {
             console.info(result);
             var drinkCombo = $firebaseArray(new Firebase("https://nrgmixology.firebaseio.com/combos/" + result.key() + "/Drinks"));
-            drinkCombo.$add(drink1);
+            //                drinkCombo.$add(drink1);
             drinkCombo.$add(drink2);
         });
     }
